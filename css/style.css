@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Variables */
+/* General */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f2f2f2;
+}
+
+img {
+  border-radius: 5px;
+  width: 225px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 95%;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+/* Header */
+.header {
+  text-align: center;
+}
+
+.header__title {
+  font-size: 3.5rem;
+  margin: 1rem 0;
+}
+
+.header__button-container {
+  margin-bottom: 2rem;
+}
+
+.header__button-container .btn {
+  padding: 0.7rem;
+  border-radius: 10px;
+  margin: 0 0.5rem 1rem 0;
+  color: #e63946;
+  background-color: #fff;
+}
+
+.header__button-container .btn:focus {
+  outline: none;
+}
+
+/* menu */
+.menu__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+  margin: 0 1rem 2rem 0;
+}
+
+.menu__item-hidden {
+  display: none;
+}
+
+.menu__content {
+  margin-left: 1rem;
+}
+
+.menu__content-price {
+  color: #e63946;
+}
+
+.menu__content-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px dotted #000;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .menu__item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+}
+
+@media (max-width: 900px) {
+  img {
+    width: 400px;
+    height: 200px;
+  }
+  .menu__item {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .menu__content {
+    margin-left: 0;
+  }
+  .menu__content-header {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  img {
+    width: 300px;
+    height: 200px;
+  }
+  .header__title {
+    font-size: 2.5rem;
+  }
+}
